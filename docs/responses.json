@@ -1,0 +1,56 @@
+{
+  "root": {
+    "status": 200,
+    "phrase": "OK",
+    "type": "text/plain; charset=utf-8",
+    "text": "Справочник редакции\n\nPOST /session — вход\nGET /users — пользователи\nGET /articles — статьи\nGET /session — текущая роль\nDELETE /session — выход"
+  },
+  "private": {
+    "status": 401,
+    "phrase": "Unauthorized",
+    "type": "text/plain; charset=utf-8",
+    "text": "Для доступа войдите через POST /session."
+  },
+  "login": {
+    "status": 200,
+    "phrase": "OK",
+    "type": "text/plain; charset=utf-8",
+    "text": "Вход выполнен. Роль: reader."
+  },
+  "users": {
+    "status": 200,
+    "phrase": "OK",
+    "type": "text/plain; charset=utf-8",
+    "text": "ID: 1\nИмя: Анна Коваль\nEmail: anna@example.org\nВозраст: 27\n\nID: 2\nИмя: Марк Бондарь\nEmail: mark@example.org"
+  },
+  "article": {
+    "status": 200,
+    "phrase": "OK",
+    "type": "text/plain; charset=utf-8",
+    "text": "ID: 1\nЗаголовок: Что хранится в сессии\nТекст: Сервер хранит роль пользователя. Браузер передаёт идентификатор сессии в cookie."
+  },
+  "forbidden": {
+    "status": 403,
+    "phrase": "Forbidden",
+    "type": "text/plain; charset=utf-8",
+    "text": "Для изменений нужна роль editor."
+  },
+  "publish": {
+    "status": 201,
+    "phrase": "Created",
+    "type": "text/plain; charset=utf-8",
+    "text": "ID: 3\nЗаголовок: Заметка\nТекст: Материал к публикации."
+  },
+  "invalid": {
+    "status": 400,
+    "phrase": "Bad Request",
+    "type": "text/plain; charset=utf-8",
+    "text": "Ошибка валидации: \"email\" must be a valid email"
+  },
+  "missing": {
+    "status": 404,
+    "phrase": "Not Found",
+    "type": "text/plain; charset=utf-8",
+    "text": "Запись не найдена."
+  }
+}

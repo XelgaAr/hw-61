@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru" data-mode="static">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f6ef">
+  <title>Журнал HTTP · Практикум Express</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./viewer.js"></script>
+</head>
+<body>
+  <header><div class="bar"><strong class="brand"><span class="symbol" aria-hidden="true">↳</span> Практикум Express</strong><span class="issue">Работа 61</span></div></header>
+  <main>
+    <h1>Журнал HTTP</h1>
+    <p class="intro">Как сессия, права и валидация влияют на ответ сервера. Выберите запрос для разбора.</p>
+    <div class="desk">
+      <section class="list" aria-labelledby="list-title">
+        <h2 id="list-title">Запросы</h2>
+        <div class="filters" aria-label="Фильтр запросов">
+          <button type="button" data-filter="all" aria-pressed="true">Все</button>
+          <button type="button" data-filter="ok" aria-pressed="false">Успешные</button>
+          <button type="button" data-filter="error" aria-pressed="false">С ошибкой</button>
+        </div>
+        <nav id="cases" aria-label="Сценарии запросов"></nav>
+      </section>
+      <article id="detail" aria-labelledby="scenario-title">
+        <p class="mode" id="mode"></p>
+        <h2 id="scenario-title">Загрузка…</h2>
+        <p id="note"></p>
+        <div class="request-line"><strong id="method"></strong><code id="path"></code><span id="role"></span></div>
+        <div id="payload" hidden><h3>Тело запроса</h3><pre id="request-body"></pre></div>
+        <section class="terminal" aria-label="Ответ сервера">
+          <div class="term-head"><h3>Ответ сервера</h3><span id="status"></span></div>
+          <code id="content-type"></code>
+          <pre id="output" aria-live="polite"></pre>
+        </section>
+        <div class="actions"><button type="button" id="replay" hidden>Выполнить запрос</button><button type="button" id="copy" disabled>Скопировать ответ</button><span id="feedback" role="status"></span></div>
+      </article>
+    </div>
+    <noscript>Для выбора запросов включите JavaScript. <a href="./responses.json">Открыть сохранённые ответы</a></noscript>
+  </main>
+</body>
+</html>
